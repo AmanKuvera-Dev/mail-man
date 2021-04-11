@@ -1,0 +1,72 @@
+.emailList {
+  flex: 1;
+}
+
+.emailList--activeSlider {
+  margin-left: 70px !important;
+}
+
+.emailList::-webkit-scrollbar {
+  display: none;
+}
+
+.emailList__settings {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex: 1;
+  border-bottom: 1px solid whitesmoke;
+  background-color: white;
+  z-index: 999;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.emailList__sections {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid whitesmoke;
+  z-index: 999;
+}
+
+.emailList__settingLeft > .MuiIconButton-root,
+.emailList__settingRight > .MuiIconButton-root {
+  font-size: 5px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.emailList__settingLeft
+  > .MuiIconButton-root
+  > .MuiIconButton-label
+  > .MuiSvgIcon-root {
+  font-size: 22px !important;
+}
+
+.emailList__settingRight
+  > .MuiIconButton-root
+  > .MuiIconButton-label
+  > .MuiSvgIcon-root {
+  font-size: 22px !important;
+}
+
+.emailList__settingLeft > .MuiCheckbox-root {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.emailList__settingLeftDropDown {
+  border-radius: 10px !important;
+  padding: 5px !important;
+  margin-left: -20px !important;
+}
+
+.emailList__settingLeftDropDown .MuiIconButton-label > .MuiSvgIcon-root > {
+  width: 10px !important;
+  height: 10px !important;
+  padding: 5px !important;
+}

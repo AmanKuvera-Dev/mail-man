@@ -1,57 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './Components/Nav/Header'
+import Sidebar from './Components/Sidebar/Sidebar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Mail from './Components/Body/Mail/Mail.jsx'
+import EmailList from './Components/Body/EmailList/EmailList.jsx'
+import sliderContext from './Context/sliderContext'
+import ComposeButton from './Components/Compose/ComposeButton'
 
 function App() {
+  const [navSlider, setNavSlider] = useState(true)
+  const [navSliderHoverState, setNavSliderHoverState] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <sliderContext.Provider value={{navSlider,setNavSlider,navSliderHoverState, setNavSliderHoverState}}>
+          <Header />
+          <div className="app__body">
+            <Sidebar/>
+            <ComposeButton/>
+            <Switch>
+              <Route path="/mail">
+                <Mail/>
+              </Route>
+              <Route path="/">
+                <EmailList/>
+              </Route>
+            </Switch>
+          </div>
+        </sliderContext.Provider>
+      </div>
+    </Router>
   );
 }
 

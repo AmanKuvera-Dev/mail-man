@@ -1,0 +1,26 @@
+.compose {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
+
+.compose > .MuiIconButton-root {
+  box-shadow: -1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -1px 0px 8px 3px rgba(56, 24, 24, 0.4);
+  background-color: #c04b37;
+}
+
+.compose > .MuiIconButton-root > .MuiIconButton-label > .MuiSvgIcon-root {
+  color: whitesmoke;
+}
+
+.compose > .MuiIconButton-root:hover {
+  box-shadow: -1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -1px 0px 8px 3px rgba(56, 24, 24, 0.4);
+}
+
+.compose > .MuiIconButton-root:hover > .MuiIconButton-label > .MuiSvgIcon-root {
+  color: #c04b37;
+}

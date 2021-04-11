@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+  padding: 8px 0px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  flex: 0.1;
+}
+
+.header__left > img {
+  object-fit: contain;
+  height: 45px;
+  margin-left: 5px;
+}
+
+.header__middle {
+  display: flex;
+  flex: 0.6;
+  align-items: center !important;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  height: 30px;
+}
+
+@media (max-width: 800px) {
+  .header__middle {
+    display: none;
+  }
+}
+
+.header__middle > .MuiSvgIcon-root {
+  color: gray !important;
+}
+
+.header__middle > input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  outline-width: 0;
+  font-size: medium;
+  background-color: transparent;
+}
+
+.header__right {
+  display: flex;
+  padding-right: 20px;
+  align-items: center;
+  flex: 0.1;
+  justify-content: space-evenly !important;
+}
+
+.header__left > .MuiIconButton-root,
+.header__right > .MuiIconButton-root {
+  font-size: 10px !important;
+}
+
+.header__right > .MuiIconButton-root {
+  padding: 7px !important;
+  margin-left: 10px;
+}
+
+.header__middle > .MuiIconButton-root {
+  font-size: 5px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.header__left > .MuiIconButton-root > .MuiIconButton-label > .MuiSvgIcon-root,
+.header__right > .MuiIconButton-root > .MuiIconButton-label > .MuiSvgIcon-root {
+  font-size: 25px !important;
+}
+
+.header__middle
+  > .MuiIconButton-root
+  > .MuiIconButton-label
+  > .MuiSvgIcon-root {
+  font-size: 22px !important;
+}
+
+.header__rightAvatar {
+  height: 35px !important;
+  width: 35px !important;
+}

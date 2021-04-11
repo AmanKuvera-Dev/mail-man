@@ -1,0 +1,60 @@
+.emailRow {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid whitesmoke;
+  cursor: pointer;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.emailRow__options {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.emailRow__message {
+  display: flex;
+  flex: 0.8;
+  font-size: 13px;
+  align-items: center;
+}
+
+.emailRow__title {
+  font-size: 13px;
+  flex: 0.3;
+}
+
+.emailRow__message > h4 {
+  max-width: 500px;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.emailRow:hover {
+  border-top: 1px solid whitesmoke;
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.34);
+}
+
+.emailRow__options > .MuiIconButton-root {
+  padding: 12px !important;
+}
+
+.emailRow__options > .emailRow__optionsBookark {
+  margin-left: -12px;
+}
+
+.emailRow__time {
+  padding-right: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.emailRow__description {
+  font-weight: 400;
+  color: gray;
+}
